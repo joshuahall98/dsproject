@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "grpc.dsproject";
+option java_outer_classname = "ProjectService2Impl";
+
+
+package dsproject2
+
+service ProjectService2{
+
+	rpc calculate2(CalculateRequest2) returns (CalculateResponse2){}
+
+	
+
+
+}
+
+message CalculateRequest2{
+	double number1 = 1;
+	
+	enum Operation{
+		walking = 0;
+		briskwalking = 1;
+		jogging = 2;
+	
+	}
+	Operation operation = 2;
+
+}
+
