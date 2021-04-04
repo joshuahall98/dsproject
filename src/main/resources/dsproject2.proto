@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "grpc.dsproject";
+option java_outer_classname = "ProjectService2Impl";
+
+
+package dsproject2;
+
+service ProjectService2{
+
+	rpc calculate2(CalculateRequest2) returns (CalculateResponse2){}
+
+	
+
+
+}
+
+message CalculateRequest2{
+	double weight = 1;
+	
+	
+}
+
+message CalculateResponse2{
+
+	double water = 1;
+	string watermessage =2;
+
+
+}
+

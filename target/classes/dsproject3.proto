@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "grpc.dsproject";
+option java_outer_classname = "ProjectService3Impl";
+
+
+package dsproject3;
+
+service ProjectService3{
+
+	rpc calculate3(CalculateRequest3) returns (CalculateResponse3){}
+
+
+
+
+}
+
+
+message CalculateRequest3{
+	double weight2 = 1;
+	double height = 2;
+	double age = 3;
+	
+	enum Operation3{
+		male = 0;
+		female = 1;
+	
+	}
+	Operation3 operation3 = 4;
+
+}
+
+message CalculateResponse3{
+
+	double calories3 = 1;
+	string caloriesmessage3 =2;
+
+
+} 
